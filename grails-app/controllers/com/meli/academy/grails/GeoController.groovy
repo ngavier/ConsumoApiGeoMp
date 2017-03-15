@@ -12,6 +12,7 @@ class GeoController {
     def index() { }
 	
 	def sucursalesCerca(){
+		
 		def address = params.address == null ? "" : params.address
 		def counts = null
 		def masCercana = null
@@ -19,8 +20,8 @@ class GeoController {
 		def point
 		
 		if(address != ""){
+			
 			point = mapService.getLatLong(address)
-			//point.lat & point.lng
 			counts = meliService.count(point.lat,point.lng,params.rango)
 			masCercanas = meliService.closest(point.lat,point.lng,params.rango)
 			def minDistance = Double.parseDouble(params.rango) //Guardo el maximo posible para empezar a buscar la menor
@@ -32,12 +33,12 @@ class GeoController {
 					minDistance = Double.parseDouble(mc.value.distance[0])
 				}
 			}
-			//masCercana = masCercanas.min{it.value.distance[0]}
 		}
 		[counts:counts, masCercanas:masCercanas, masCercana:masCercana,lat:point.lat,lng:point.lng,range:params.rango,direccion:params.address]
 	}
 	
 	def capitales() {
+		
 		render 'Capitales de Emi'
 	}
 }
