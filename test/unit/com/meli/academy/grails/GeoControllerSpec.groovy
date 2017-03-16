@@ -21,4 +21,8 @@ class GeoControllerSpec extends Specification {
 	void "test unitario"(){
 		
 	}
+	
+	void "test nacho"() {
+		
+	}
 }
