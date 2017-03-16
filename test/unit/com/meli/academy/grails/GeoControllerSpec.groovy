@@ -17,4 +17,8 @@ class GeoControllerSpec extends Specification {
 
     void "test something"() {
     }
+	
+	void "test ssss as"(){
+	
+}
 }
