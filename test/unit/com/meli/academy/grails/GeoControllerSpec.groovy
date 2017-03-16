@@ -28,6 +28,6 @@ class GeoControllerSpec extends Specification {
 	}
 	
 	void "test rodri"(){
-		
+		println "Probando conflictos"
 	}
 }
