@@ -24,6 +24,7 @@ class GeoControllerSpec extends Specification {
 	
 	void "test nacho"() {
 		println "Generando errores de dependencia con rodri"
+		pritnln "Probando"
 		
 	}
 	
